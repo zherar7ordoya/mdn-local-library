@@ -17,7 +17,7 @@ AuthorSchema.virtual('name').get(function() {
 
 //Virtual for author's URL
 AuthorSchema.virtual('url').get(function() {
-  return '/catalog/author/' + this._id;
+  return '/author/' + this._id;
 });
 
 AuthorSchema.virtual('date_of_birth_formatted').get(function() {

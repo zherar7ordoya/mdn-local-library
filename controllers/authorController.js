@@ -132,7 +132,7 @@ exports.author_delete_get = function(req, res, next) {
       }
       if (results.author == null) {
         // No results.
-        res.redirect('/catalog/authors');
+        res.redirect('/authors');
       }
       // Successful, so render.
       res.render('author_delete', {
@@ -175,7 +175,7 @@ exports.author_delete_post = function(req, res, next) {
             return next(err);
           }
           // Success - go to author list
-          res.redirect('/catalog/authors');
+          res.redirect('/authors');
         });
       }
     }
@@ -183,7 +183,7 @@ exports.author_delete_post = function(req, res, next) {
 };
 
 exports.author_update_get = function(req, res) {
-  Author.findById(req.params.id, function(err, author) {
+  Author.findById(req.params.id, function(err, author, next) {
     if (err) {
       return next(err);
     }
@@ -254,7 +254,7 @@ exports.author_update_post = [
         if (err) {
           return next(err);
         }
-        // Successful - redirect to genre detail page.
+        // Successful - redirect to genre detail page
         res.redirect(theauthor.url);
       });
     }

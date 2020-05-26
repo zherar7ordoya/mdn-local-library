@@ -210,7 +210,7 @@ exports.book_delete_get = function(req, res, next) {
       }
       if (results.book == null) {
         // No results.
-        res.redirect('/catalog/books');
+        res.redirect('/books');
       }
       // Successful, so render.
       res.render('book_delete', {
@@ -253,7 +253,7 @@ exports.book_delete_post = function(req, res, next) {
             return next(err);
           }
           // Success - go to author list
-          res.redirect('/catalog/books');
+          res.redirect('/books');
         });
       }
     }
