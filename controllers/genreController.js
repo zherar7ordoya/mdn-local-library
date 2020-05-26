@@ -125,7 +125,7 @@ exports.genre_delete_get = function(req, res, next) {
       }
       if (results.genre == null) {
         // No results.
-        res.redirect('/catalog/genres');
+        res.redirect('/genres');
       }
       // Successful, so render.
       res.render('genre_delete', {
@@ -168,7 +168,7 @@ exports.genre_delete_post = function(req, res, next) {
             return next(err);
           }
           // Success - go to genre list
-          res.redirect('/catalog/genres');
+          res.redirect('/genres');
         });
       }
     }

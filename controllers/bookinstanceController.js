@@ -148,7 +148,7 @@ exports.bookinstance_delete_post = function(req, res, next) {
       return next(err);
     }
     // Success, so redirect to list of BookInstance items.
-    res.redirect('/catalog/bookinstances');
+    res.redirect('/bookinstances');
   });
 };
 

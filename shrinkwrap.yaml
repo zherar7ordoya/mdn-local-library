@@ -7,6 +7,7 @@ dependencies:
   express-validator: 6.4.1
   helmet: 3.22.0
   http-errors: 1.6.3
+  minimist: 1.2.5
   moment: 2.25.3
   mongoose: 5.9.14
   morgan: 1.9.1
@@ -2603,6 +2604,7 @@ specifiers:
   express-validator: ^6.2.0
   helmet: ^3.21.2
   http-errors: ~1.6.3
+  minimist: ^1.2.5
   moment: ^2.24.0
   mongoose: ^5.7.5
   morgan: ~1.9.1
